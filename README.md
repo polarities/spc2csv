@@ -15,6 +15,8 @@ to use, you need to specify directory that contains multiple or single spc file 
 and, use `convert_spc2csv()` function to convert from spc file to csv file that can easily visualized with tools.
 
 ```python
+import spc2csv
+
 directory = './spcfiles'
 spc_fileList = spc2csv.get_spcFile(dir)
 
