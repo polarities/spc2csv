@@ -7,15 +7,15 @@ this code written by likulogy with full of love to convert spc to csv file for v
 # Usage
 this simple code allows convert EDS spectra data from spc to csv format with few lines of code in python console.
 
-to use, you need to specify directory that contains multiple or single spc file as a variables. after that, call get_spcFile function with directory input.
+to use, you need to specify directory that contains multiple or single spc file as a variables. after that, call 'get_spcFile' function with directory input.
 
-and, use convert_spc2csv() function to convert from spc file to csv file that can easily visualized with tools.
+and, use 'convert_spc2csv()' function to convert from spc file to csv file that can easily visualized with tools.
 
 ```python
 directory = './spcfiles'
-spcl = spc2csv.get_spcFile(dir)
+spc_fileList = spc2csv.get_spcFile(dir)
 
-for i in spcl:
+for i in spc_fileList:
     spc2csv.convert_spc2csv(str(dir) + '/' + str(i))
 ```
 
