@@ -3,6 +3,9 @@ this tiny python code will allow convert from '.spc(EDAX EDS spectrum)' to '.csv
 
 # Purposes
 this code written by likulogy with full of love to convert spc to csv file for visualize with Origin. csv file is easily edittable, and compatible with most of Text Editors or Graphing Software as like as Excel or Origin.
+## Functionality
+- spc to csv conversion in python console.
+- get list of all spc file that located in specified directory.
 
 # Usage
 this simple code allows convert EDS spectra data from spc to csv format with few lines of code in python console.
@@ -22,5 +25,11 @@ for i in spc_fileList:
 NOTE : output of `get_spcFile()` function only contains name of file and extensions in the list, so you should manipulate result of `get_spcFile()` function to get proper result as like above.
 
 # Dependencies
+## Python Version
+- Python 3
 
-
+## Python Library
+- HyperSpy 1.3
+- numpy
+- os
+- csv
