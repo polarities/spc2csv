@@ -38,7 +38,7 @@ class spc2csv():
 
 if __name__ == "__main__":
     directory = './spcfiles'
-    spcl = spc2csv.get_spcFile(dir)
+    spc_list = spc2csv.get_spcFile(directory)
 
-    for i in spcl:
-        spc2csv.convert_spc2csv(str(dir) + '/' + str(i))
+    for i in spc_list:
+        spc2csv.convert_spc2csv(str(directory) + '/' + str(i))
