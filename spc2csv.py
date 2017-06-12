@@ -11,12 +11,10 @@ class spc2csv():
         """
         s = hs.load(spectrum)
 
-        st = s.original_metadata.spc_header.startEnergy
-        ed = s.original_metadata.spc_header.endEnergy
-        tt = s.original_metadata.spc_header.numPts
+        total_dataPoints = s.original_metadata.spc_header.numPts
+        step = s.original_metadata.spc_header.evPerChan
 
-        iteration = np.arange(0, (tt - 1))
-        step = ((ed - st) / tt)
+        iteration = np.arange(0, (total_dataPoints - 1))
 
         output_path = spectrum.replace('.spc', '.csv')
         with open(output_path, 'w') as csv_file:
@@ -25,6 +23,7 @@ class spc2csv():
             for i in iteration:
                 data = (i * step, s.data[i])
                 writer.writerow(data)
+
 
     def get_spcFile(directory):
         """
